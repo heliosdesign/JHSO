@@ -66,11 +66,15 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader'],
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'images/'
-        }
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          }
+        ]
       },
       {
         test: /\.(mp3)$/,
