@@ -1,7 +1,10 @@
 @import './css/wipe.css';
 @import './scss/fonts.scss';
 @import './scss/typography.scss';
-@import './scss/button.scss';
+@import './scss/buttons.scss';
+@import './scss/lists.scss';
+@import './scss/bullet.scss';
+@import './scss/video.scss';
 
 * {
   box-sizing: border-box;
@@ -10,33 +13,76 @@
 html {
   font-size: 10px;
 }
-main {
-  width: 375px;
-  height: 667px;
-  background: #fff;
-  text-align: center;
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-article {
+main {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  overflow: scroll;
+}
+
+section {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+
+.slide:nth-child(odd) {
+  background: #fff;
+}
+
+.slide:nth-child(even) {
+  background: #eee;
+}
+
+.slide-panel {
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  background: inherit;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 0 30px;
-  background: #eee;
+}
+
+.slide-panel:nth-child(even) {
+  background: #111;
+  color: #eee;
 }
 
 .slide-1 {
-  background: #eee;
-  z-index: 2;
+  z-index: 5;
+}
+
+.slide-1 .slide-panel {
+  display: flex;
 }
 
 .slide-2 {
-  background: #aaa;
+  z-index: 4;
+}
+
+.slide-3 {
+  z-index: 3;
+}
+
+.slide-4 {
+  z-index: 2;
+}
+
+.slide-5 {
   z-index: 1;
 }

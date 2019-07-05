@@ -42,60 +42,18 @@ p {
   &.mod-bold {
     font-weight: 700;
   }
-
-  &.mod-list {
-    text-align: left;
-  }
 }
 
 .type-info {
+  position: absolute;
+  bottom: 2rem;
+  margin-bottom: 0;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   font-weight: 400;
-  margin-bottom: 0;
-}
+  line-height: 1rem;
 
-ol {
-  counter-reset: my-awesome-counter;
-  list-style: none;
-  padding-left: 42px;
-  margin-top: 2rem;
-}
-
-ol li {
-  counter-increment: my-awesome-counter;
-  position: relative;
-}
-
-ol li::before {
-  content: counter(my-awesome-counter);
-  color: #eee;
-  background: #111;
-  font-family: 'Archivo Narrow', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  position: absolute;
-  --size: 42px;
-  left: calc(-1 * var(--size) - 10px);
-  line-height: var(--size);
-  width: var(--size);
-  height: var(--size);
-  top: 0;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 1px 1px 0 #999;
-}
-
-span {
-  font-family: 'Archivo Narrow', sans-serif;
-  font-size: 26px;
-  background: #fff;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2rem;
-  padding: 0.6rem;
-  display: inline-block;
+  & .icon-scroll {
+    font-size: 3rem;
+  }
 }
