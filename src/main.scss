@@ -1,0 +1,42 @@
+@import './css/wipe.css';
+@import './scss/fonts.scss';
+@import './scss/typography.scss';
+@import './scss/button.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+main {
+  width: 375px;
+  height: 667px;
+  background: #fff;
+  text-align: center;
+}
+
+article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 0 30px;
+  background: #eee;
+}
+
+.slide-1 {
+  background: #eee;
+  z-index: 2;
+}
+
+.slide-2 {
+  background: #aaa;
+  z-index: 1;
+}
