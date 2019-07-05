@@ -11,6 +11,7 @@
   border-radius: 2rem;
   background: #111;
   color: #eee;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn-prev {
@@ -21,4 +22,22 @@
   width: 2rem;
   background: url('./icons/chevron-left-solid.svg');
   background-size: cover;
+}
+
+.btn-quiz {
+  width: 245px;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+
+  &.mod-yes {
+    background: #fff;
+    color: #111;
+    margin-bottom: 1rem;
+  }
+
+  &.mod-no {
+    background: #111;
+    color: #eee;
+  }
 }

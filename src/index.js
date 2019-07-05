@@ -19,7 +19,7 @@ window.onload = function() {
   }
 
   function prevSlide() {
-    TweenMax.to(`.slide-${index}`, 1, {
+    TweenMax.to(`.slide-${index - 1}`, 1, {
       x: '0%',
       ease: Expo.easeInOut
     })

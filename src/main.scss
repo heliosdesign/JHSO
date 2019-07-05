@@ -3,6 +3,7 @@
 @import './scss/typography.scss';
 @import './scss/buttons.scss';
 @import './scss/lists.scss';
+@import './scss/bullet.scss';
 
 * {
   box-sizing: border-box;
@@ -32,12 +33,26 @@ article {
   background: #eee;
 }
 
-.slide-1 {
+.slide:nth-child(odd) {
+  background: #fff;
+}
+
+.slide:nth-child(even) {
   background: #eee;
-  z-index: 2;
+}
+
+.slide-1 {
+  z-index: 4;
 }
 
 .slide-2 {
-  background: #aaa;
+  z-index: 3;
+}
+
+.slide-3 {
+  z-index: 2;
+}
+
+.slide-4 {
   z-index: 1;
 }
