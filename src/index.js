@@ -10,21 +10,41 @@ window.onload = function() {
   const btnPrev = [...document.querySelectorAll('.btn-prev')]
 
   function nextSlide() {
-    TweenMax.to(`.slide-${index}`, 1, {
-      x: '-100%',
-      ease: Expo.easeInOut
+    TweenMax.set(`.slide-${index + 1} .slide-panel`, {
+      display: 'flex'
     })
 
-    index <= slides.length + 1 ? index++ : ''
+    TweenMax.to(`.slide-${index}`, 1, {
+      x: '-100%',
+      ease: Expo.easeInOut,
+      onComplete: function() {
+        TweenMax.set(`.slide-${index} .slide-panel`, {
+          display: 'none',
+          onComplete: function() {
+            index <= slides.length + 1 ? index++ : ''
+          }
+        })
+      }
+    })
   }
 
   function prevSlide() {
-    TweenMax.to(`.slide-${index - 1}`, 1, {
-      x: '0%',
-      ease: Expo.easeInOut
+    TweenMax.set(`.slide-${index - 1} .slide-panel`, {
+      display: 'flex'
     })
 
-    index > 1 ? index-- : ''
+    TweenMax.to(`.slide-${index - 1}`, 1, {
+      x: '0%',
+      ease: Expo.easeInOut,
+      onComplete: function() {
+        TweenMax.set(`.slide-${index} .slide-panel`, {
+          display: 'none',
+          onComplete: function() {
+            index > 1 ? index-- : ''
+          }
+        })
+      }
+    })
   }
 
   btnNext.forEach(btn => {

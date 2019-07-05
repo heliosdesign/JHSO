@@ -45,8 +45,15 @@ p {
 }
 
 .type-info {
+  position: absolute;
+  bottom: 2rem;
+  margin-bottom: 0;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   font-weight: 400;
-  margin-bottom: 0;
+  line-height: 1rem;
+
+  & .icon-scroll {
+    font-size: 3rem;
+  }
 }
