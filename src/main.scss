@@ -12,24 +12,30 @@
 html {
   font-size: 10px;
 }
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
-  width: 375px;
-  height: 667px;
+  width: 100%;
+  height: 100vh;
   background: #fff;
   text-align: center;
   position: relative;
+  overflow: scroll;
 }
 
 section {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  min-height: 667px;
+  height: 100%;
   background: #eee;
 }
 
@@ -43,7 +49,7 @@ section {
 
 .slide-panel {
   width: 100%;
-  height: 667px;
+  height: 100%;
   padding: 0 30px;
   background: inherit;
   position: relative;
