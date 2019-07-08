@@ -56,6 +56,20 @@ section
     height: auto
     padding: 60px 30px 120px
 
+  &.mod-answer
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+
+    &.mod-correct
+      background: #fff
+      color: #111
+
+    &.mod-incorrect
+      background: #333
+      color: #fff
+
   &:nth-child(even)
     background: #999
     color: #eee
@@ -98,6 +112,9 @@ section
 
 .slide-12
   z-index: 14
+
+  & .slide-panel
+    display: flex
 
 .slide-13
   z-index: 13
