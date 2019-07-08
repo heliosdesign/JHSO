@@ -1,0 +1,35 @@
+.list
+  counter-reset: counter
+  list-style: none
+  padding-left: 46px
+  margin-top: 2rem
+
+
+.list li
+  counter-increment: counter
+  position: relative
+
+
+.list li::before
+  content: counter(counter)
+  position: absolute
+  left: -56px
+  top: 0
+  width: 42px
+  height: 42px
+  border-radius: 50%
+  background: #111
+  color: #eee
+  font-family: 'Archivo Narrow', sans-serif
+  font-size: 26px
+  font-weight: 700
+  line-height: 42px
+  text-align: center
+
+
+.list-type
+  font-family: 'Lato', sans-serif
+  font-size: 17px
+  font-weight: 400
+  margin-bottom: 2rem
+  text-align: left
