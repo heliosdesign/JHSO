@@ -1,24 +1,24 @@
-import './main.scss'
+import './main.sass'
 
 import { TweenMax, Expo } from 'gsap/TweenMax'
 
 require('./video/1.mp4')
 
 window.onload = function() {
-  // document.body.requestFullscreen()
-
   let index = 1
 
-  const slides = [...document.querySelectorAll('.slide')]
+  // _ DOM REFERENCES *********************************************************
 
+  const slides = [...document.querySelectorAll('.slide')]
   const btnNext = [...document.querySelectorAll('.btn-next')]
   const btnPrev = [...document.querySelectorAll('.btn-prev')]
-
   const video = document.querySelector('.video-media')
   const progressBar = document.querySelector('.video-progress-bar')
   const btnPlay = document.querySelector('.btn-video.mod-play')
   const btnRestart = document.querySelector('.btn-video.mod-restart')
   const btnSkip = document.querySelector('.btn-video.mod-skip')
+
+  // _ FUNCTIONS **************************************************************
 
   function nextSlide() {
     TweenMax.set(`.slide-${index + 1} .slide-panel`, {
@@ -92,9 +92,11 @@ window.onload = function() {
     btn.addEventListener('click', prevSlide)
   })
 
-  btnPlay.addEventListener('click', playVideo)
-  btnRestart.addEventListener('click', restartVideo)
-  btnSkip.addEventListener('click', skipVideo)
-  video.addEventListener('loadeddata', restartVideo)
-  video.addEventListener('timeupdate', handleProgress)
+  // _ EVENT HANDLERS *********************************************************
+
+  // btnPlay.addEventListener('click', playVideo)
+  // btnRestart.addEventListener('click', restartVideo)
+  // btnSkip.addEventListener('click', skipVideo)
+  // video.addEventListener('loadeddata', restartVideo)
+  // video.addEventListener('timeupdate', handleProgress)
 }
