@@ -51,6 +51,8 @@ window.onload = function() {
   // _ DOM REFERENCES *********************************************************
 
   const slides = document.querySelectorAll('.slide')
+  const btnMenu = document.querySelectorAll('.btn-menu')
+  const btnClose = document.querySelector('.btn-close')
   const btnNext = document.querySelectorAll('.btn-next')
   const btnPrev = document.querySelectorAll('.btn-prev')
   const videos = document.querySelectorAll('.video-media')
@@ -61,6 +63,11 @@ window.onload = function() {
   const btnYes = document.querySelectorAll('.btn-quiz.mod-yes')
   const btnNo = document.querySelectorAll('.btn-quiz.mod-no')
   const btnQuestionReset = document.querySelectorAll('.btn-prev.mod-question-reset')
+
+  const btnPage1 = document.querySelector('.btn-page-1')
+  const btnPage2 = document.querySelector('.btn-page-2')
+  const btnPage3 = document.querySelector('.btn-page-3')
+  const btnPage4 = document.querySelector('.btn-page-4')
 
   // _ FUNCTIONS **************************************************************
 
@@ -118,9 +125,12 @@ window.onload = function() {
   function restartVideo() {
     const video = document.querySelector(`.slide-${index} video`)
     const btnPlay = document.querySelector(`.slide-${index} .btn-video.mod-play`)
-    video.pause()
-    video.currentTime = 0
-    btnPlay.innerHTML = `<i class="icon-play"></i>`
+
+    if (video !== null) {
+      video.pause()
+      video.currentTime = 0
+      btnPlay.innerHTML = `<i class="icon-play"></i>`
+    }
   }
 
   function skipVideo() {
@@ -166,6 +176,61 @@ window.onload = function() {
     question.style.display = 'flex'
   }
 
+  function openNav() {
+    TweenMax.to('nav', 1, {
+      left: 0,
+      ease: Expo.easeInOut
+    })
+  }
+
+  function closeNav() {
+    TweenMax.to('nav', 1, {
+      left: '-100%',
+      ease: Expo.easeInOut
+    })
+  }
+
+  function switchPage() {
+    index = parseInt(this.dataset.page)
+
+    for (let i = 1; i < index; i++) {
+      TweenMax.set(`.slide-${i}`, {
+        x: '-100%'
+      })
+
+      TweenMax.set(`.slide-${i} .slide-panel`, {
+        display: 'none'
+      })
+    }
+
+    for (let i = index + 1; i <= slides.length; i++) {
+      TweenMax.set(`.slide-${i}`, {
+        x: '0%'
+      })
+      TweenMax.set(`.slide-${i} .slide-panel`, {
+        display: 'none'
+      })
+    }
+
+    TweenMax.set(`.slide-${index}`, {
+      x: '0%'
+    })
+
+    TweenMax.set(`.slide-${index} .slide-panel`, {
+      display: 'flex'
+    })
+
+    closeNav()
+  }
+
+  // _ EVENT HANDLERS *********************************************************
+
+  btnMenu.forEach(btn => {
+    btn.addEventListener('click', openNav)
+  })
+
+  btnClose.addEventListener('click', closeNav)
+
   btnNext.forEach(btn => {
     btn.addEventListener('click', nextSlide)
   })
@@ -185,8 +250,6 @@ window.onload = function() {
   btnQuestionReset.forEach(btn => {
     btn.addEventListener('click', resetQuestion)
   })
-
-  // _ EVENT HANDLERS *********************************************************
 
   btnPlay.forEach(btn => {
     btn.addEventListener('click', playVideo)
@@ -208,4 +271,9 @@ window.onload = function() {
   btnStopVideo.forEach(btn => {
     btn.addEventListener('click', restartVideo)
   })
+
+  btnPage1.addEventListener('click', switchPage)
+  btnPage2.addEventListener('click', switchPage)
+  btnPage3.addEventListener('click', switchPage)
+  btnPage4.addEventListener('click', switchPage)
 }
