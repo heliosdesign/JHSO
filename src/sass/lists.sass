@@ -6,10 +6,15 @@
   padding-left: 46px
   margin: 2rem 0
 
+  &.mod-alt
+    margin: 1rem 0 0
+
+  &.mod-alt li::before
+    top: -1rem
+
 .list li
   counter-increment: counter
   position: relative
-
 
 .list li::before
   content: counter(counter)
@@ -27,7 +32,6 @@
   line-height: 42px
   text-align: center
 
-
 .list-type
   font-family: 'Archivo Narrow', sans-serif
   font-size: 17px
@@ -35,3 +39,10 @@
   font-style: italic
   margin-bottom: 2rem
   text-align: left
+
+  &.mod-alt
+    margin-bottom: 4rem
+
+.list a
+  color: $blue
+  text-decoration: underline

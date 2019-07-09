@@ -33,17 +33,20 @@ require('./images/8-2.svg')
 require('./images/9-1.svg')
 require('./images/10-1.svg')
 require('./images/11-1.svg')
-require('./images/16-1.svg')
-require('./images/21-1.svg')
-require('./images/21-2.svg')
-require('./images/21-3.svg')
-require('./images/21-4.svg')
+require('./images/12-1.svg')
+require('./images/17-1.svg')
 require('./images/22-1.svg')
+require('./images/22-2.svg')
+require('./images/22-3.svg')
+require('./images/22-4.svg')
 require('./images/23-1.svg')
-require('./images/23-2.svg')
-require('./images/23-3.svg')
-require('./images/23-4.svg')
 require('./images/24-1.svg')
+require('./images/24-2.svg')
+require('./images/24-3.svg')
+require('./images/24-4.svg')
+require('./images/25-1.svg')
+require('./images/26-1.svg')
+require('./images/jhso-logo-en.svg')
 
 window.onload = function() {
   let index = 1
@@ -64,10 +67,7 @@ window.onload = function() {
   const btnNo = document.querySelectorAll('.btn-quiz.mod-no')
   const btnQuestionReset = document.querySelectorAll('.btn-prev.mod-question-reset')
 
-  const btnPage1 = document.querySelector('.btn-page-1')
-  const btnPage2 = document.querySelector('.btn-page-2')
-  const btnPage3 = document.querySelector('.btn-page-3')
-  const btnPage4 = document.querySelector('.btn-page-4')
+  const btnNav = document.querySelectorAll('.btn-nav')
 
   // _ FUNCTIONS **************************************************************
 
@@ -272,8 +272,7 @@ window.onload = function() {
     btn.addEventListener('click', restartVideo)
   })
 
-  btnPage1.addEventListener('click', switchPage)
-  btnPage2.addEventListener('click', switchPage)
-  btnPage3.addEventListener('click', switchPage)
-  btnPage4.addEventListener('click', switchPage)
+  btnNav.forEach(btn => {
+    btn.addEventListener('click', switchPage)
+  })
 }
