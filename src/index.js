@@ -71,6 +71,34 @@ window.onload = function() {
 
   // _ FUNCTIONS **************************************************************
 
+  function updateNav() {
+    btnNav.forEach(btn => btn.classList.remove('is-active'))
+
+    if (index >= 1 && index < 4) {
+      btnNav[0].classList.add('is-active')
+    } else if (index === 4) {
+      btnNav[1].classList.add('is-active')
+    } else if (index === 5) {
+      btnNav[2].classList.add('is-active')
+    } else if (index === 6) {
+      btnNav[3].classList.add('is-active')
+    } else if (index >= 7 && index < 10) {
+      btnNav[4].classList.add('is-active')
+    } else if (index >= 10 && index < 12) {
+      btnNav[5].classList.add('is-active')
+    } else if (index >= 12 && index < 17) {
+      btnNav[6].classList.add('is-active')
+    } else if (index >= 17 && index < 22) {
+      btnNav[7].classList.add('is-active')
+    } else if (index >= 22 && index < 24) {
+      btnNav[8].classList.add('is-active')
+    } else if (index >= 24 && index < 26) {
+      btnNav[9].classList.add('is-active')
+    } else if (index >= 26) {
+      btnNav[10].classList.add('is-active')
+    }
+  }
+
   function nextSlide() {
     TweenMax.set(`.slide-${index + 1} .slide-panel`, {
       display: 'flex'
@@ -84,25 +112,7 @@ window.onload = function() {
           display: 'none',
           onComplete: function() {
             index <= slides.length + 1 ? index++ : ''
-          }
-        })
-      }
-    })
-  }
-
-  function prevSlide() {
-    TweenMax.set(`.slide-${index - 1} .slide-panel`, {
-      display: 'flex'
-    })
-
-    TweenMax.to(`.slide-${index - 1}`, 1, {
-      x: '0%',
-      ease: Expo.easeInOut,
-      onComplete: function() {
-        TweenMax.set(`.slide-${index} .slide-panel`, {
-          display: 'none',
-          onComplete: function() {
-            index > 1 ? index-- : ''
+            updateNav()
           }
         })
       }
@@ -221,6 +231,7 @@ window.onload = function() {
     })
 
     closeNav()
+    updateNav()
   }
 
   // _ EVENT HANDLERS *********************************************************
