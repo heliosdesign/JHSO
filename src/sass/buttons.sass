@@ -4,6 +4,8 @@
 @import './css/icons-ie7.css';
 @import './css/icons.css';
 
+@import './color.sass'
+
 .btn
   font-family: 'Archivo Narrow', sans-serif
   font-size: 20px
@@ -16,8 +18,8 @@
   bottom: 4rem
   padding: 1rem 2rem
   border-radius: 2rem
-  background: #111
-  color: #eee
+  background: $black
+  color: $white
 
 .btn-prev
   position: absolute
@@ -26,12 +28,12 @@
   height: 4rem
   width: 4rem
   border-radius: 50%
-  background: #587995
-  color: #fff
+  background: $blue
+  color: $white
 
   &.mod-quiz
-    background: #fff
-    color: #587995
+    background: $white
+    color: $blue
 
   & .icon-prev
     font-size: 2rem
@@ -46,16 +48,16 @@
   height: 4rem
   width: 4rem
   border-radius: 50%
-  background: #587995
-  color: #fff
+  background: $blue
+  color: $white
 
   &.mod-light
-    background: #eee
-    color: #587995
+    background: $white
+    color: $blue
 
   &.mod-light-2
-    background: #eee
-    color: #333
+    background: $white
+    color: $grey
 
   & .icon-voiceover
     font-size: 2rem
@@ -67,11 +69,11 @@
   left: 2rem
   height: 4rem
   width: 4rem
-  color: #111
+  color: $black
   box-shadow: none
 
   &.mod-light
-    color: #eee
+    color: $white
 
   & .icon-menu
     font-size: 2rem
@@ -84,7 +86,7 @@
   right: 2rem
   height: 4rem
   width: 4rem
-  color: #111
+  color: $black
   box-shadow: none
 
 .btn-quiz
@@ -95,22 +97,22 @@
 
   &.mod-yes
     bottom: 8.2rem
-    background: #fff
-    color: #333
+    background: $white
+    color: $grey
     margin-bottom: 1rem
 
   &.mod-no
     bottom: 4rem
-    background: #333
-    color: #eee
+    background: $grey
+    color: $white
 
 .btn-video
   display: inline-block
   width: 5rem
   height: 5rem
   border-radius: 50%
-  background: #587995
-  color: #eee
+  background: $blue
+  color: $white
 
   &.mod-play
     height: 6rem
