@@ -7,12 +7,19 @@
 @import './sass/video.sass'
 @import './sass/color.sass'
 @import './sass/image.sass'
+@import './sass/mediaqueries.sass'
 
 *
   box-sizing: border-box
 
 html
   font-size: 10px
+
+  @media screen and (min-width: $break-medium-1)
+    font-size: 12.5px
+
+  @media screen and (min-width: $break-large-1)
+    font-size: 15px
 
 body
   width: 100%
@@ -54,7 +61,6 @@ section
 .slide-panel
   width: 100%
   height: 100%
-  padding: 0 30px
   position: relative
   display: none
   flex-direction: column
@@ -62,9 +68,15 @@ section
   align-items: center
   overflow: hidden
 
+  @media screen and (min-width: $break-medium-1)
+    padding: 0 18.75%
+
+  @media screen and (min-width: $break-large-1)
+    padding: 0 25%
+
   &.mod-alt
     height: auto
-    padding: 60px 30px 120px
+    padding: 9rem 3rem 12rem
 
   &.mod-answer
     position: absolute
@@ -80,6 +92,20 @@ section
       background: $grey
       color: $white
 
+.content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 315px
+
+  @media screen and (min-width: $break-medium-1)
+    width: 500px
+
+  @media screen and (min-width: $break-large-1)
+    width: 720px
+
+
 .flex-half
   flex: 1
   padding-top: 4rem
@@ -87,8 +113,18 @@ section
 
   &.mod-no-padding
     position: relative
-    top: -6rem
+    top: -8rem
     padding-top: 0
+
+  @media screen and (min-width: $break-medium-1)
+    &.mod-no-padding
+      position: relative
+      top: -4rem
+
+  @media screen and (min-width: $break-large-1)
+    &.mod-no-padding
+      position: relative
+      top: -2rem
 
 .slide-1
   z-index: 27

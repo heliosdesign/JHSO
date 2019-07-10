@@ -1,43 +1,27 @@
-img
+@import './mediaqueries.sass'
+
+.image
+  width: calc(37.5rem * 0.75)
   margin-bottom: 4rem
   z-index: 1
 
-.image
+  &.mod-width-1
+    width: calc(37.5rem * 0.67)
 
-  &.mod-small
-    width: 60%
-    margin-top: -6rem
+  &.mod-width-2
+    width: calc(37.5rem * 0.5)
+
+  &.mod-width-3
+    width: calc(37.5rem * 0.4)
     margin-bottom: 3rem
 
-  &.mod-full-width
-    width: calc(100% + 60px)
-    max-width: 200%
-
-  &.mod-margin-top
-    margin-top: -8rem
-
-  &.mod-margin-top-alt
+  &.mod-position-1
     margin-top: -4rem
-    margin-bottom: 2rem
+
+  &.mod-width-full
+    width: 37.5rem
 
 .image-background
+  width: 100%
   position: absolute
   z-index: 0
-
-  &.mod-center
-    top: -2rem
-
-  &.mod-top
-    top: -35rem
-
-  &.mod-top-alt
-    top: -3.2rem
-
-  &.mod-bottom
-    bottom: -4rem
-
-  &.mod-left
-    left: 0
-
-  &.mod-right
-    right: 0
