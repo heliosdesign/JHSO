@@ -1,8 +1,16 @@
 @import './color.sass'
+@import './mediaqueries.sass'
 
 .video
   width: calc(100% + 6rem)
   margin-bottom: 2rem
+
+  @media screen and (min-width: $break-medium-1)
+    width: 768px
+
+  @media screen and (min-width: $break-large-1)
+    &.mod-margin-fix
+      margin-bottom: 1rem
 
 .video-media
   width: 100%
@@ -27,4 +35,4 @@
   margin-bottom: 4rem
 
 .video-title
-  margin: 3rem 0
+  margin-bottom: 3rem

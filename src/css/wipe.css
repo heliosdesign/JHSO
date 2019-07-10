@@ -156,7 +156,7 @@ html input[disabled] {
 
 img {
   display: block; /* 1 */
-  max-width: 100%; /* 2 */
+  /* max-width: 100%; 2 */
   height: auto; /* 2 */
   border-style: none; /* 3 */
 }

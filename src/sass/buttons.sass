@@ -5,10 +5,11 @@
 @import './css/icons.css';
 
 @import './color.sass'
+@import './mediaqueries.sass'
 
 .btn
   font-family: 'Archivo Narrow', sans-serif
-  font-size: 20px
+  font-size: 2rem
   font-weight: 700
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2)
   z-index: 3
@@ -20,6 +21,9 @@
   border-radius: 2rem
   background: $black
   color: $white
+
+  @media screen and (min-width: $break-large-1)
+    bottom: 3rem
 
 .btn-prev
   position: absolute
@@ -99,7 +103,7 @@
 
 .btn-quiz
   position: absolute
-  width: 245px
+  width: 315px
   padding: 1rem 2rem
   border-radius: 2rem
 
@@ -113,6 +117,13 @@
     bottom: 4rem
     background: $grey
     color: $white
+
+  @media screen and (min-width: $break-large-1)
+    &.mod-yes
+      bottom: 7.2rem
+
+    &.mod-no
+      bottom: 3rem
 
 .btn-video
   display: inline-block
@@ -130,4 +141,4 @@
     & .icon-play
       position: relative
       left: 0.3rem
-      font-size: 25px
+      font-size: 2.5rem
