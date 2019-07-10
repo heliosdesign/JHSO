@@ -19,9 +19,74 @@
     margin-top: -4rem
 
   &.mod-width-full
-    width: 37.5rem
+    width: calc(100% + 6rem)
+
+    @media screen and (min-width: $break-medium-1)
+      width: 100%
 
 .image-background
-  width: 100%
   position: absolute
   z-index: 0
+
+  &.mod-blob
+    width: 200%
+
+  &.mod-blob-2
+    width: 180%
+
+  &.mod-blob-position-1
+    margin-top: 2rem
+
+  &.mod-number-left
+    height: 100%
+    left: 0
+
+  &.mod-number-right
+    height: 100%
+    right: 0
+
+  &.mod-drip
+    top: 0
+    width: 100%
+
+  &.mod-drip-2
+    top: 0
+    width: 100%
+
+  &.mod-drip-3
+    top: -5%
+    width: 100%
+
+  @media screen and (min-width: $break-medium-1)
+    &.mod-blob-position-1
+      margin-top: 4rem
+
+    &.mod-drip-2
+      top: -10%
+
+    &.mod-drip-3
+      top: -10%
+
+  @media screen and (min-width: $break-large-1)
+    &.mod-drip
+      top: -50%
+
+    &.mod-drip-2
+      top: -70%
+
+    &.mod-drip-3
+      top: -60%
+
+    &.mod-blob
+      width: 133%
+
+    &.mod-blob-2
+      width: 100%
+
+    &.mod-blob-position-2
+      margin-left: 5rem
+
+.image-header
+  position: absolute
+  bottom: -5%
+  width: 100%

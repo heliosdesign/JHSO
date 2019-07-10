@@ -1,16 +1,29 @@
 @import './color.sass'
+@import './mediaqueries.sass'
 
 .list
   counter-reset: counter
   list-style: none
-  padding-left: 4.6rem
+  padding-left: 5.2rem
   margin: 2rem 0
+  width: 315px
 
   &.mod-alt
+    padding-left: 6.2rem
     margin: 4rem 0
 
   &.mod-alt li::before
     top: -1rem
+
+  @media screen and (min-width: $break-medium-1)
+    width: 400px
+
+  @media screen and (min-width: $break-large-1)
+    width: 550px
+
+    &.mod-alt
+      padding-left: 20%
+
 
 .list li
   counter-increment: counter
@@ -19,8 +32,8 @@
 .list li::before
   content: counter(counter)
   position: absolute
-  left: -5.6rem
-  top: 0
+  left: -5.2rem
+  top: -0.25rem
   width: 4.2rem
   height: 4.2rem
   border-radius: 50%
@@ -31,6 +44,9 @@
   font-weight: 700
   line-height: 4.2rem
   text-align: center
+
+  @media screen and (min-width: $break-medium-1)
+    left: -5.7rem
 
 .list-type
   font-family: 'Archivo Narrow', sans-serif

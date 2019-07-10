@@ -5,6 +5,7 @@
 @import './css/icons.css';
 
 @import './color.sass'
+@import './mediaqueries.sass'
 
 .btn
   font-family: 'Archivo Narrow', sans-serif
@@ -20,6 +21,9 @@
   border-radius: 2rem
   background: $black
   color: $white
+
+  @media screen and (min-width: $break-large-1)
+    bottom: 3rem
 
 .btn-prev
   position: absolute
@@ -113,6 +117,13 @@
     bottom: 4rem
     background: $grey
     color: $white
+
+  @media screen and (min-width: $break-large-1)
+    &.mod-yes
+      bottom: 7.2rem
+
+    &.mod-no
+      bottom: 3rem
 
 .btn-video
   display: inline-block
