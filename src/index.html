@@ -9,37 +9,37 @@
   <body>
     <main>
       <nav>
-        <button class="btn btn-close"><i class="icon-close"></i></button>
-        <button class="btn btn-nav is-active" data-page="1">Intro</button>
-        <button class="btn btn-nav" data-page="4">Employer Asks</button>
-        <button class="btn btn-nav" data-page="5">Employer Doesn't Ask</button>
-        <button class="btn btn-nav" data-page="6">Disadvantages to Disclose</button>
-        <button class="btn btn-nav" data-page="7">Advantages to Disclose</button>
-        <button class="btn btn-nav" data-page="10">I Want to Disclose</button>
-        <button class="btn btn-nav" data-page="12">Test Your Knowledge</button>
-        <button class="btn btn-nav" data-page="17">Video Tips</button>
-        <button class="btn btn-nav" data-page="22">Final Recommendations</button>
-        <button class="btn btn-nav" data-page="24">Review</button>
-        <button class="btn btn-nav" data-page="26">Resources</button>
+        <button class="btn btn-close" name="close"><i class="icon-close"></i></button>
+        <button class="btn btn-nav is-active" name="intro" data-page="1">Intro</button>
+        <button class="btn btn-nav" name="employer asks" data-page="4">Employer Asks</button>
+        <button class="btn btn-nav" name="employer doesn't ask" data-page="5">Employer Doesn't Ask</button>
+        <button class="btn btn-nav" name="disadvantages to disclose" data-page="6">Disadvantages to Disclose</button>
+        <button class="btn btn-nav" name="advantages to disclose" data-page="7">Advantages to Disclose</button>
+        <button class="btn btn-nav" name="i want to disclose" data-page="10">I Want to Disclose</button>
+        <button class="btn btn-nav" name="test your knowledge" data-page="12">Test Your Knowledge</button>
+        <button class="btn btn-nav" name="video tips" data-page="17">Video Tips</button>
+        <button class="btn btn-nav" name="final recommendations" data-page="22">Final Recommendations</button>
+        <button class="btn btn-nav" name="review" data-page="24">Review</button>
+        <button class="btn btn-nav" name="resources" data-page="26">Resources</button>
       </nav>
 
       <section class="slide slide-1">
         <div class="slide-panel bg-blue">
-          <button class="btn btn-menu mod-light"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu mod-light" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover mod-light"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="./images/1-1.svg" class="image" />
+            <img src="./images/1-1.svg" class="image" alt="Man looking at himself in mirror." />
             <h1 class="type-heading mod-heading-3">
               I've got a job interview.<br />(And a criminal record.)
             </h1>
           </div>
-          <button class="btn btn-next">What now?</button>
+          <button class="btn btn-next" name="next">What now?</button>
         </div>
       </section>
 
       <section class="slide slide-2">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
             <p class="type-body mod-bold">
@@ -56,16 +56,20 @@
               </li>
             </ol>
           </div>
-          <button class="btn btn-next">Let's get started</button>
+          <button class="btn btn-next" name="next">Let's get started</button>
         </div>
       </section>
 
       <section class="slide slide-3">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="./images/3-1.svg" class="image" />
+            <img
+              src="./images/3-1.svg"
+              class="image"
+              alt="A collection of people doing various types of jobs."
+            />
             <p class="type-body">
               The majority of people who have criminal records are employed, and many of them are
               working in careers that are satisfying and rewarding.
@@ -87,7 +91,11 @@
         </div>
         <div class="slide-panel bg-white">
           <div class="content">
-            <img src="./images/3-2.svg" class="image mod-width-1" />
+            <img
+              src="./images/3-2.svg"
+              class="image mod-width-1"
+              alt="A man sitting on a bench, pondering what to do."
+            />
             <p class="type-heading mod-heading-3">
               The bottom line is that it's really up to you.
             </p>
@@ -103,7 +111,7 @@
         </div>
         <div class="slide-panel bg-blue">
           <div class="content">
-            <img src="./images/3-3.svg" class="image" />
+            <img src="./images/3-3.svg" class="image" alt="A woman looking over paperwork." />
             <p class="type-body mod-bold">
               In a job interview, an employer<br />will do one of two things:
             </p>
@@ -112,16 +120,16 @@
               or they won’t.
             </p>
           </div>
-          <button class="btn btn-next">Scenario 1</button>
+          <button class="btn btn-next" name="next">Scenario 1</button>
         </div>
       </section>
 
       <section class="slide slide-4">
         <div class="slide-panel bg-white text-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="flex-half-top">
-            <img src="images/4-1.svg" class="image-header" />
+            <img src="images/4-1.svg" class="image-header" alt="A woman sitting at a desk." />
           </div>
           <div class="flex-half-bottom">
             <div class="content">
@@ -136,7 +144,11 @@
         </div>
         <div class="slide-panel bg-grey">
           <div class="content">
-            <img src="images/4-2.svg" class="image mod-width-2" />
+            <img
+              src="images/4-2.svg"
+              class="image mod-width-2"
+              alt="A man walking in a hooded sweatshirt."
+            />
             <p class="type-body">
               By law, the employer can ask you during an interview if you have a criminal record,
               but it must be phrased like this:
@@ -152,7 +164,11 @@
           </div>
         </div>
         <div class="slide-panel bg-white">
-          <img src="images/4-3.svg" class="image-background mod-blob" />
+          <img
+            src="images/4-3.svg"
+            class="image-background mod-blob"
+            alt="Decorative background image."
+          />
           <div class="content">
             <p class="type-heading mod-heading-1">
               Again, the decision to disclose your criminal record is up to you.
@@ -161,7 +177,11 @@
         </div>
         <div class="slide-panel bg-blue">
           <div class="content">
-            <img src="images/4-4.svg" class="image mod-width-1" />
+            <img
+              src="images/4-4.svg"
+              class="image mod-width-1"
+              alt="A collection of refused resumés."
+            />
             <p class="type-heading mod-heading-1">However,</p>
             <p class="type-body">
               if during an interview, you are asked if you have a criminal record and you refuse to
@@ -175,7 +195,7 @@
         </div>
         <div class="slide-panel bg-white">
           <div class="content">
-            <img src="images/4-5.svg" class="image" />
+            <img src="images/4-5.svg" class="image" alt="A man deciding between 2 choices." />
             <p class="type-body">
               At this point, you might be thinking that the decision to disclose a criminal record
               doesn't really feel like a choice.
@@ -184,16 +204,16 @@
               The unfortunate truth is that this is how the system works.
             </p>
           </div>
-          <button class="btn btn-next">Scenario 2</button>
+          <button class="btn btn-next" name="next">Scenario 2</button>
         </div>
       </section>
 
       <section class="slide slide-5">
         <div class="slide-panel bg-white text-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="flex-half-top">
-            <img src="images/5-1.svg" class="image-header" />
+            <img src="images/5-1.svg" class="image-header" alt="A woman sitting at a desk." />
           </div>
           <div class="flex-half-bottom">
             <div class="content">
@@ -208,7 +228,7 @@
         </div>
         <div class="slide-panel bg-grey">
           <div class="content">
-            <img src="images/5-2.svg" class="image" />
+            <img src="images/5-2.svg" class="image" alt="A man sitting on a ledge." />
             <p class="type-body">In this case, you might be wondering,</p>
             <p class="type-heading mod-heading-4">
               "Should I voluntarily disclose that I have a criminal record anyway?"
@@ -220,24 +240,24 @@
           </div>
         </div>
         <div class="slide-panel bg-white">
-          <img src="images/5-3-1.svg" class="image-background mod-drip" />
+          <img src="images/5-3-1.svg" class="image-background mod-drip" alt="Decorative background image." />
           <div class="content mod-margin-bottom">
-            <img src="images/5-3-2.svg" class="image mod-width-2" />
+            <img src="images/5-3-2.svg" class="image mod-width-2" alt="A man sitting on a box, with yes and no thought bubbles floating above his head." />
             <p class="type-heading mod-heading-3">Making this decision can be challenging.</p>
             <p class="type-body">
               It's important to consider the pros and cons of disclosing your criminal record,
               <span class="mod-bold">even if you are not asked.</span>
             </p>
           </div>
-          <button class="btn btn-next">Let's look at them.</button>
+          <button class="btn btn-next" name="next">Let's look at them.</button>
         </div>
       </section>
 
       <section class="slide slide-6">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
-          <img src="images/6-1.svg" class="image-background mod-blob mod-blob-position-1" />
+          <img src="images/6-1.svg" class="image-background mod-blob mod-blob-position-1" alt="Decorative background image." />
           <div class="content">
             <p class="type-heading mod-heading-1">
               Let's start with some of the disadvantages of voluntarily disclosing your criminal
@@ -248,7 +268,7 @@
         </div>
         <div class="slide-panel bg-grey">
           <div class="content">
-            <img src="images/6-2.svg" class="image mod-width-2" />
+            <img src="images/6-2.svg" class="image mod-width-2" alt="A man discarding pieces of paper." />
             <p class="type-heading mod-heading-4">
               In general, it is likely that an employer will have a more negative view of you if you
               tell them about your criminal record.
@@ -259,9 +279,9 @@
           </div>
         </div>
         <div class="slide-panel bg-white">
-          <img src="images/6-3-1.svg" class="image-background mod-drip-2" />
+          <img src="images/6-3-1.svg" class="image-background mod-drip-2" alt="Decorative background image." />
           <div class="content mod-margin-bottom">
-            <img src="images/6-3-2.svg" class="image" />
+            <img src="images/6-3-2.svg" class="image" alt="A judge sits at her desk with a gavel." />
             <p class="type-heading mod-heading-4">
               Also, there is no law that protects someone with a criminal record from
               discrimination.
@@ -271,15 +291,15 @@
               a pardon, by law they can reject your application or dismiss you.
             </p>
           </div>
-          <button class="btn btn-next">What's the alternative?</button>
+          <button class="btn btn-next" name="next">What's the alternative?</button>
         </div>
       </section>
 
       <section class="slide slide-7">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
-          <img src="images/7-1.svg" class="image-background mod-blob-2 mod-blob-position-2" />
+          <img src="images/7-1.svg" class="image-background mod-blob-2 mod-blob-position-2" alt="Decorative background image." />
           <div class="content">
             <p class="type-heading mod-heading-1">
               What about the advantages of voluntarily disclosing your criminal record?
@@ -289,7 +309,7 @@
         </div>
         <div class="slide-panel bg-grey">
           <div class="content">
-            <img src="images/7-2.svg" class="image mod-width-2" />
+            <img src="images/7-2.svg" class="image mod-width-2" alt="A man sits reading a newspaper." />
             <p class="type-heading mod-heading-4">
               Sometimes an employer might learn about your criminal record after hiring you.
             </p>
@@ -302,7 +322,7 @@
           </div>
         </div>
         <div class="slide-panel bg-white">
-          <img src="images/7-3.svg" class="image-background mod-drip-3" />
+          <img src="images/7-3.svg" class="image-background mod-drip-3" alt="A pair of co-workers look at a news story on their computers." />
           <div class="flex-half-top"></div>
           <div class="flex-half-bottom mod-alt">
             <div class="content">
@@ -317,16 +337,16 @@
               </p>
             </div>
           </div>
-          <button class="btn btn-next">Show me the advantages!</button>
+          <button class="btn btn-next" name="next">Show me the advantages!</button>
         </div>
       </section>
 
       <section class="slide slide-8">
         <div class="slide-panel mod-alt bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/8-1.svg" class="image" />
+            <img src="images/8-1.svg" class="image" alt="A businessman holding a briefcase, talking on the phone." />
             <p class="type-heading mod-heading-2">Advantage #1</p>
             <p class="type-heading mod-heading-4">
               It would let you address concerns an employer might have regarding your criminal
@@ -343,7 +363,7 @@
           </div>
 
           <div class="content">
-          <img src="images/8-2.svg" class="image mod-width-full" />
+            <img src="images/8-2.svg" class="image mod-width-full" alt="A handshake between two people." />
             <p class="type-heading mod-heading-2">Advantage #2</p>
             <p class="type-heading mod-heading-4">
               It could possibly build trust between you and the employer.
@@ -353,16 +373,16 @@
             </p>
             <p class="type-body">If this is the case, disclosing your record would make sense.</p>
           </div>
-          <button class="btn btn-next">So what should I do?</button>
+          <button class="btn btn-next" name="next">So what should I do?</button>
         </div>
       </section>
 
       <section class="slide slide-9">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/9-1.svg" class="image" />
+            <img src="images/9-1.svg" class="image" alt="A woman indecisively looking at a laptop computer." />
             <p class="type-body">
               The bottom line is that there is no right or wrong approach to this decision.
             </p>
@@ -372,16 +392,16 @@
               have discussed, to help you make a choice that is right for you.
             </p>
           </div>
-          <button class="btn btn-next">What if I decide to disclose?</button>
+          <button class="btn btn-next" name="next">What if I decide to disclose?</button>
         </div>
       </section>
 
       <section class="slide slide-10">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/10-1.svg" class="image mod-width-3 mod-position-1" />
+            <img src="images/10-1.svg" class="image mod-width-3 mod-position-1" alt="A depiction of a chat bubble." />
             <p class="type-body">
               If you choose to disclose your criminal record, in all likelihood, there are two
               things that you might need to do:
@@ -395,16 +415,16 @@
             </ol>
             <p class="type-body">Let's first talk about getting a criminal background check.</p>
           </div>
-          <button class="btn btn-next">What do I need to know?</button>
+          <button class="btn btn-next" name="next">What do I need to know?</button>
         </div>
       </section>
 
       <section class="slide slide-11">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/11-1.svg" class="image mod-width-3 mod-position-1" />
+            <img src="images/11-1.svg" class="image mod-width-3 mod-position-1" alt="A collection of various documents." />
             <p class="type-heading mod-heading-4">
               There are laws and policies on what information is released on a criminal record.
             </p>
@@ -425,16 +445,16 @@
               >
             </p>
           </div>
-          <button class="btn btn-next">Want to test your knowledge?</button>
+          <button class="btn btn-next" name="next">Want to test your knowledge?</button>
         </div>
       </section>
 
       <section class="slide slide-12">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/12-1.svg" class="image" />
+            <img src="images/12-1.svg" class="image" alt="A man sitting in front of a laptop computer." />
             <p class="type-body mod-bold">
               Want to test your knowledge and see what you already know about criminal background
               checks?
@@ -445,13 +465,13 @@
               them.
             </p>
           </div>
-          <button class="btn btn-next">Game on.</button>
+          <button class="btn btn-next" name="next">Game on.</button>
         </div>
       </section>
 
       <section class="slide slide-13">
         <div class="slide-panel bg-blue mod-question">
-          <button class="btn btn-menu mod-light"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu mod-light" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover mod-light"><i class="icon-voiceover"></i></button>
           <div class="content">
             <p class="type-heading mod-heading-3">
@@ -459,8 +479,8 @@
               background check.
             </p>
           </div>
-          <button class="btn btn-quiz mod-yes" data-correct="true">Agree</button>
-          <button class="btn btn-quiz mod-no" data-correct="false">Disagree</button>
+          <button class="btn btn-quiz mod-yes" name="yes" data-correct="true">Agree</button>
+          <button class="btn btn-quiz mod-no" name="no" data-correct="false">Disagree</button>
         </div>
         <div class="slide-panel mod-answer">
           <div class="content">
@@ -470,13 +490,13 @@
               given written consent for them to do so.
             </p>
           </div>
-          <button class="btn btn-next">Next Question</button>
+          <button class="btn btn-next" name="next">Next Question</button>
         </div>
       </section>
 
       <section class="slide slide-14">
         <div class="slide-panel bg-blue mod-question">
-          <button class="btn btn-menu mod-light"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu mod-light" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover mod-light"><i class="icon-voiceover"></i></button>
           <div class="content">
             <p class="type-heading mod-heading-3">
@@ -484,8 +504,8 @@
               give it to your employer.
             </p>
           </div>
-          <button class="btn btn-quiz mod-yes" data-correct="false">Agree</button>
-          <button class="btn btn-quiz mod-no" data-correct="true">Disagree</button>
+          <button class="btn btn-quiz mod-yes" name="yes" data-correct="false">Agree</button>
+          <button class="btn btn-quiz mod-no" name="no" data-correct="true">Disagree</button>
         </div>
         <div class="slide-panel mod-answer">
           <div class="content">
@@ -495,13 +515,13 @@
               They should give this information to you directly, unless you request otherwise.
             </p>
           </div>
-          <button class="btn btn-next">Next Question</button>
+          <button class="btn btn-next" name="next">Next Question</button>
         </div>
       </section>
 
       <section class="slide slide-15">
         <div class="slide-panel bg-blue mod-question">
-          <button class="btn btn-menu mod-light"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu mod-light" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover mod-light"><i class="icon-voiceover"></i></button>
           <div class="content">
             <p class="type-heading mod-heading-3">
@@ -509,8 +529,8 @@
               employer who requested it.
             </p>
           </div>
-          <button class="btn btn-quiz mod-yes" data-correct="false">Agree</button>
-          <button class="btn btn-quiz mod-no" data-correct="true">Disagree</button>
+          <button class="btn btn-quiz mod-yes" name="yes" data-correct="false">Agree</button>
+          <button class="btn btn-quiz mod-no" name="no" data-correct="true">Disagree</button>
         </div>
         <div class="slide-panel mod-answer">
           <div class="content">
@@ -521,13 +541,13 @@
               criminal background check is completely up to you.
             </p>
           </div>
-          <button class="btn btn-next">Next Question</button>
+          <button class="btn btn-next" name="next">Next Question</button>
         </div>
       </section>
 
       <section class="slide slide-16">
         <div class="slide-panel bg-blue mod-question">
-          <button class="btn btn-menu mod-light"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu mod-light" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover mod-light"><i class="icon-voiceover"></i></button>
           <div class="content">
             <p class="type-heading mod-heading-3">
@@ -535,8 +555,8 @@
               answer your questions.
             </p>
           </div>
-          <button class="btn btn-quiz mod-yes" data-correct="true">Agree</button>
-          <button class="btn btn-quiz mod-no" data-correct="false">Disagree</button>
+          <button class="btn btn-quiz mod-yes" name="yes" data-correct="true">Agree</button>
+          <button class="btn btn-quiz mod-no" name="no" data-correct="false">Disagree</button>
         </div>
         <div class="slide-panel mod-answer">
           <div class="content">
@@ -560,16 +580,16 @@
               >
             </p>
           </div>
-          <button class="btn btn-next">Next Question</button>
+          <button class="btn btn-next" name="next">Next Question</button>
         </div>
       </section>
 
       <section class="slide slide-17">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/17-1.svg" class="image mod-width-3 mod-position-1" />
+            <img src="images/17-1.svg" class="image mod-width-3 mod-position-1" alt="A man holding a resumé in his hand." />
             <p class="type-body mod-bold">
               Now that you have learned about your rights regarding criminal background checks,
               let's turn our attention to the act of disclosing your criminal record in person to an
@@ -584,13 +604,13 @@
               have a positive experience.
             </p>
           </div>
-          <button class="btn btn-next">Let’s Start</button>
+          <button class="btn btn-next" name="next">Let’s Start</button>
         </div>
       </section>
 
       <section class="slide slide-18">
         <div class="slide-panel bg-white mod-alt">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
             <p class="type-heading mod-heading-3 video-title">
@@ -604,9 +624,9 @@
             </div>
           </div>
           <div class="video-controls">
-            <button class="btn btn-video mod-restart"><i class="icon-restart"></i></button>
-            <button class="btn btn-video mod-play"><i class="icon-play"></i></button>
-            <button class="btn btn-video mod-skip"><i class="icon-skip"></i></button>
+            <button class="btn btn-video mod-restart" name="restart"><i class="icon-restart"></i></button>
+            <button class="btn btn-video mod-play" name="play"><i class="icon-play"></i></button>
+            <button class="btn btn-video mod-skip" name="skip"><i class="icon-skip"></i></button>
           </div>
           <div class="content">
             <p class="type-body">
@@ -620,13 +640,13 @@
               You may want to practice with an employment counsellor, friend, or family member.
             </p>
           </div>
-          <button class="btn btn-next mod-stop">Next Tip</button>
+          <button class="btn btn-next mod-stop" name="next">Next Tip</button>
         </div>
       </section>
 
       <section class="slide slide-19">
         <div class="slide-panel bg-white mod-alt">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
             <p class="type-heading mod-heading-3 video-title">Take responsibility.</p>
@@ -638,9 +658,9 @@
             </div>
           </div>
           <div class="video-controls">
-            <button class="btn btn-video mod-restart"><i class="icon-restart"></i></button>
-            <button class="btn btn-video mod-play"><i class="icon-play"></i></button>
-            <button class="btn btn-video mod-skip"><i class="icon-skip"></i></button>
+            <button class="btn btn-video mod-restart" name="restart"><i class="icon-restart"></i></button>
+            <button class="btn btn-video mod-play" name="play"><i class="icon-play"></i></button>
+            <button class="btn btn-video mod-skip" name="skip"><i class="icon-skip"></i></button>
           </div>
           <div class="content">
             <p class="type-body">
@@ -658,13 +678,13 @@
               If you regret and feel sorry for what happened, it can help to say this as well.
             </p>
           </div>
-          <button class="btn btn-next mod-stop">Next Tip</button>
+          <button class="btn btn-next mod-stop" name="next">Next Tip</button>
         </div>
       </section>
 
       <section class="slide slide-20">
         <div class="slide-panel bg-white mod-alt">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
             <p class="type-heading mod-heading-3 video-title">Paint a New Picture.</p>
@@ -676,9 +696,9 @@
             </div>
           </div>
           <div class="video-controls">
-            <button class="btn btn-video mod-restart"><i class="icon-restart"></i></button>
-            <button class="btn btn-video mod-play"><i class="icon-play"></i></button>
-            <button class="btn btn-video mod-skip"><i class="icon-skip"></i></button>
+            <button class="btn btn-video mod-restart" name="restart"><i class="icon-restart"></i></button>
+            <button class="btn btn-video mod-play" name="play"><i class="icon-play"></i></button>
+            <button class="btn btn-video mod-skip" name="skip"><i class="icon-skip"></i></button>
           </div>
           <div class="content">
             <p class="type-body">
@@ -694,7 +714,7 @@
               friends, or have gone back to school.
             </p>
           </div>
-          <button class="btn btn-next mod-stop">Next Tip</button>
+          <button class="btn btn-next mod-stop" name="next">Next Tip</button>
         </div>
       </section>
 
@@ -714,9 +734,9 @@
             </div>
           </div>
           <div class="video-controls">
-            <button class="btn btn-video mod-restart"><i class="icon-restart"></i></button>
-            <button class="btn btn-video mod-play"><i class="icon-play"></i></button>
-            <button class="btn btn-video mod-skip"><i class="icon-skip"></i></button>
+            <button class="btn btn-video mod-restart" name="restart"><i class="icon-restart"></i></button>
+            <button class="btn btn-video mod-play" name="play"><i class="icon-play"></i></button>
+            <button class="btn btn-video mod-skip" name="skip"><i class="icon-skip"></i></button>
           </div>
           <div class="content">
             <p class="type-body">
@@ -735,16 +755,16 @@
               that you can provide them.
             </p>
           </div>
-          <button class="btn btn-next mod-stop">Next Tip</button>
+          <button class="btn btn-next mod-stop" name="next">Next Tip</button>
         </div>
       </section>
 
       <section class="slide slide-22">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/22-1.svg" class="image" />
+            <img src="images/22-1.svg" class="image" alt="An employer shaking the hand of an interviewee after a job interview." />
             <p class="type-heading mod-heading-3">
               We have some final things to recommend that can help you.
             </p>
@@ -752,7 +772,7 @@
           <p class="type-info"><i class="icon-scroll"></i><br />Scroll Down</p>
         </div>
         <div class="slide-panel bg-blue">
-          <img src="images/22-2.svg" class="image-background mod-number-right" />
+          <img src="images/22-2.svg" class="image-background mod-number-right" alt="Decorative background image." />
           <div class="content">
             <p class="bullet">1</p>
             <p class="type-heading mod-heading-4">
@@ -774,7 +794,7 @@
           </div>
         </div>
         <div class="slide-panel bg-white">
-          <img src="images/22-3.svg" class="image-background mod-number-left" />
+          <img src="images/22-3.svg" class="image-background mod-number-left" alt="Decorative background image." />
           <div class="content">
             <p class="bullet">2</p>
             <p class="type-heading mod-heading-4">
@@ -787,7 +807,7 @@
           </div>
         </div>
         <div class="slide-panel bg-blue">
-          <img src="images/22-4.svg" class="image-background mod-number-right" />
+          <img src="images/22-4.svg" class="image-background mod-number-right" alt="Decorative background image." />
           <div class="content">
             <p class="bullet">3</p>
             <p class="type-body">
@@ -801,16 +821,16 @@
               involved in a physical altercation.
             </p>
           </div>
-          <button class="btn btn-next">What now?</button>
+          <button class="btn btn-next" name="next">What now?</button>
         </div>
       </section>
 
       <section class="slide slide-23">
         <div class="slide-panel bg-grey">
-          <button class="btn btn-menu mod-light"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu mod-light" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover mod-light-2"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/23-1.svg" class="image mod-width-2 mod-position-1" />
+            <img src="images/23-1.svg" class="image mod-width-2 mod-position-1" alt="A stack of resumés on a desk." />
             <p class="type-body">
               Finally, after you disclose your criminal record and leave the meeting,
             </p>
@@ -836,20 +856,20 @@
             </div>
           </div>
           <div class="video-controls">
-            <button class="btn btn-video mod-restart"><i class="icon-restart"></i></button>
-            <button class="btn btn-video mod-play"><i class="icon-play"></i></button>
-            <button class="btn btn-video mod-skip"><i class="icon-skip"></i></button>
+            <button class="btn btn-video mod-restart" name="restart"><i class="icon-restart"></i></button>
+            <button class="btn btn-video mod-play" name="play"><i class="icon-play"></i></button>
+            <button class="btn btn-video mod-skip" name="skip"><i class="icon-skip"></i></button>
           </div>
-          <button class="btn btn-next mod-stop">Recap</button>
+          <button class="btn btn-next mod-stop" name="next">Recap</button>
         </div>
       </section>
 
       <section class="slide slide-24">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/24-1.svg" class="image mod-width-1" />
+            <img src="images/24-1.svg" class="image mod-width-1" alt="A man standing in a garden thiking about life."/>
             <p class="type-heading mod-heading-3">Mentally prepare by welcoming the question.</p>
             <p class="type-body">First, have a positive mindset to prepare for the question.</p>
           </div>
@@ -857,7 +877,7 @@
         </div>
         <div class="slide-panel bg-white">
           <div class="content">
-            <img src="images/24-2.svg" class="image mod-width-1" />
+            <img src="images/24-2.svg" class="image mod-width-1" alt="A pair of people looking remorseful." />
             <p class="type-heading mod-heading-3">Take responsibility.</p>
             <p class="type-body">
               Second, take responsibility for your part in the mistake or problem which led to your
@@ -868,7 +888,7 @@
         </div>
         <div class="slide-panel bg-white">
           <div class="content">
-            <img src="images/24-3.svg" class="image mod-width-1" />
+            <img src="images/24-3.svg" class="image mod-width-1" alt="A pair of adult students writing a test." />
             <p class="type-heading mod-heading-3">Paint a new picture.</p>
             <p class="type-body">
               Third, paint a new picture of how your life has changed for the better.
@@ -877,7 +897,7 @@
         </div>
         <div class="slide-panel bg-white">
           <div class="content">
-            <img src="images/24-4.svg" class="image mod-width-1" />
+            <img src="images/24-4.svg" class="image mod-width-1" alt="A man successfully leaving a job interview after being hired." />
             <p class="type-heading mod-heading-3">
               End with a positive - tell them what you can offer.
             </p>
@@ -887,16 +907,16 @@
               employer.
             </p>
           </div>
-          <button class="btn btn-next">Conclusion</button>
+          <button class="btn btn-next" name="next">Conclusion</button>
         </div>
       </section>
 
       <section class="slide slide-25">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="images/25-1.svg" class="image mod-width-1 mod-position-1" />
+            <img src="images/25-1.svg" class="image mod-width-1 mod-position-1" alt="An employer shaking the hand of their newest employee after a successful job inteview."/>
             <p class="type-heading mod-heading-3">That’s it.</p>
             <p class="type-body">
               Hopefully you now have a better idea about how to make an informed decision about
@@ -905,15 +925,14 @@
             </p>
             <p class="type-body mod-bold">Thank you for completing this workshop!</p>
           </div>
-          <button class="btn btn-next">Resources</button>
+          <button class="btn btn-next" name="next">Resources</button>
         </div>
       </section>
 
       <section class="slide slide-26">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
-          <!-- <img src="images/26-1.svg" class="image mod-width-2 mod-position-1" /> -->
           <div class="content">
             <p class="type-heading mod-heading-3">Resources</p>
             <ol class="list mod-alt">
@@ -950,17 +969,16 @@
               </li>
             </ol>
           </div>
-          <button class="btn btn-next">Acknowledgements</button>
+          <button class="btn btn-next" name="next">Acknowledgements</button>
         </div>
       </section>
 
       <section class="slide slide-27">
         <div class="slide-panel bg-white">
-          <button class="btn btn-menu"><i class="icon-menu"></i></button>
+          <button class="btn btn-menu" name="menu"><i class="icon-menu"></i></button>
           <button class="btn btn-voiceover"><i class="icon-voiceover"></i></button>
           <div class="content">
-            <img src="./images/jhso-logo-en.svg" class="image" />
-            <!-- <p class="type-heading mod-heading-3">Acknowledgements</p> -->
+            <img src="./images/jhso-logo-en.svg" class="image" alt="John Howard Society of Ontario"/>
             <p class="type-body">
               This workshop was adapted from the workshop created by John Howard Society of Kingston
               & District, with generous funding from the City of Toronto.
