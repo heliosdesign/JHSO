@@ -8,6 +8,12 @@ require('./video/3.mp4')
 require('./video/4.mp4')
 require('./video/5.mp4')
 
+require('./video/1.vtt')
+require('./video/2.vtt')
+require('./video/3.vtt')
+require('./video/4.vtt')
+require('./video/5.vtt')
+
 require('./images/1-1.svg')
 require('./images/3-1.svg')
 require('./images/3-2.svg')

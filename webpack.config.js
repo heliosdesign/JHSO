@@ -99,6 +99,18 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(vtt)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'video/'
+            }
+          }
+        ]
       }
     ]
   }
