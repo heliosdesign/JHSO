@@ -187,16 +187,34 @@ window.onload = function() {
   }
 
   function openNav() {
+    TweenMax.set('nav', {
+      display: 'flex'
+    })
+
     TweenMax.to('nav', 1, {
       left: 0,
-      ease: Expo.easeInOut
+      ease: Expo.easeInOut,
+      onComplete: function() {
+        TweenMax.set(`.slide-${index} .slide-panel`, {
+          display: 'none'
+        })
+      }
     })
   }
 
   function closeNav() {
+    TweenMax.set(`.slide-${index} .slide-panel`, {
+      display: 'flex'
+    })
+
     TweenMax.to('nav', 1, {
       left: '-100%',
-      ease: Expo.easeInOut
+      ease: Expo.easeInOut,
+      onComplete: function() {
+        TweenMax.set('nav', {
+          display: 'none'
+        })
+      }
     })
   }
 
@@ -207,7 +225,6 @@ window.onload = function() {
       TweenMax.set(`.slide-${i}`, {
         x: '-100%'
       })
-
       TweenMax.set(`.slide-${i} .slide-panel`, {
         display: 'none'
       })
