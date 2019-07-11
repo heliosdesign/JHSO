@@ -203,10 +203,12 @@ window.onload = function() {
     })
   }
 
-  function resetQuestion() {
-    const question = document.querySelector(`.slide-${index - 1} .mod-question`)
-    question.style.opacity = 1
-    question.style.display = 'flex'
+  function resetQuestions() {
+    const questions = document.querySelectorAll(`.mod-question`)
+
+    questions.forEach(question => {
+      TweenMax.set(question, { opacity: 1, display: 'flex' })
+    })
   }
 
   function openNav() {
@@ -273,6 +275,7 @@ window.onload = function() {
 
     audio.src = `./audio/${index}.mp3`
 
+    resetQuestions()
     closeNav()
     updateNav()
   }
