@@ -14,6 +14,17 @@ require('./video/3.vtt')
 require('./video/4.vtt')
 require('./video/5.vtt')
 
+require('./audio/1.mp3')
+require('./audio/2.mp3')
+require('./audio/3.mp3')
+require('./audio/4.mp3')
+require('./audio/5.mp3')
+require('./audio/6.mp3')
+require('./audio/7.mp3')
+require('./audio/8.mp3')
+require('./audio/9.mp3')
+require('./audio/10.mp3')
+
 require('./images/1-1.svg')
 require('./images/3-1.svg')
 require('./images/3-2.svg')
@@ -75,6 +86,9 @@ window.onload = function() {
 
   const btnNav = document.querySelectorAll('.btn-nav')
 
+  const btnVoiceover = [...document.querySelectorAll('.btn-voiceover')]
+  const audio = document.querySelector('.voiceover')
+
   // _ FUNCTIONS **************************************************************
 
   function updateNav() {
@@ -106,6 +120,8 @@ window.onload = function() {
   }
 
   function nextSlide() {
+    audio.paused ? '' : audio.pause()
+
     TweenMax.set(`.slide-${index + 1} .slide-panel`, {
       display: 'flex'
     })
@@ -118,6 +134,7 @@ window.onload = function() {
           display: 'none',
           onComplete: function() {
             index <= slides.length + 1 ? index++ : ''
+            audio.src = `./audio/${index}.mp3`
             updateNav()
           }
         })
@@ -225,6 +242,7 @@ window.onload = function() {
   }
 
   function switchPage() {
+    audio.paused ? '' : audio.pause()
     index = parseInt(this.dataset.page)
 
     for (let i = 1; i < index; i++) {
@@ -253,8 +271,14 @@ window.onload = function() {
       display: 'flex'
     })
 
+    audio.src = `./audio/${index}.mp3`
+
     closeNav()
     updateNav()
+  }
+
+  function playAudio() {
+    audio.paused ? audio.play() : audio.pause()
   }
 
   // _ EVENT HANDLERS *********************************************************
@@ -308,5 +332,9 @@ window.onload = function() {
 
   btnNav.forEach(btn => {
     btn.addEventListener('click', switchPage)
+  })
+
+  btnVoiceover.forEach(btn => {
+    btn.addEventListener('click', playAudio)
   })
 }
