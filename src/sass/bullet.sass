@@ -1,14 +1,19 @@
 @import './color.sass'
+@import './typography.sass'
+
+
+$bullet-size: 42px
+
 
 .bullet
-  width: 42px
-  height: 42px
-  border-radius: 50%
   background: $black
+  border-radius: 50%
   color: $white
-  font-family: 'Archivo Narrow', sans-serif
+  font-family: $font-headings
   font-size: 26px
   font-weight: 700
+  height: $bullet-size
   line-height: 42px
-  text-align: center
   margin-bottom: 2rem
+  text-align: center
+  width: $bullet-size

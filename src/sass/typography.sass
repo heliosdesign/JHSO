@@ -1,6 +1,11 @@
 @import './color.sass'
 @import './mediaqueries.sass'
 
+
+$font-headings: 'Archivo Narrow', sans-serif
+$font-body: 'Lato', sans-serif
+
+
 h1,
 h2,
 h3,
@@ -8,14 +13,14 @@ h4,
 h5,
 h6,
 p
-  font-family: 'Lato', sans-serif
+  font-family: $font-body
   font-size: 1.7rem
   font-weight: 400
   z-index: 2
 
 
 .type-heading
-  font-family: 'Archivo Narrow', sans-serif
+  font-family: $font-headings
   font-weight: 700
   margin-bottom: 2rem
   z-index: 1
@@ -39,8 +44,9 @@ p
   & > span.mod-highlight
     color: $yellow
 
+
 .type-body
-  font-family: 'Lato', sans-serif
+  font-family: $font-body
   font-size: 1.7rem
   font-weight: 400
   margin-bottom: 2rem
@@ -57,19 +63,18 @@ p
     color: $blue
     text-decoration: underline
 
+
 .type-info
-  position: absolute
   bottom: 3rem
-  margin-bottom: 0
-  font-family: 'Lato', sans-serif
+  font-family: $font-body
   font-size: 1.2rem
   font-weight: 400
   line-height: 1rem
+  margin-bottom: 0
+  position: absolute
   z-index: 1
 
   & .icon-scroll
-    font-size: 3rem
     display: block
+    font-size: 3rem
     margin-bottom: -0.5rem
-
-
