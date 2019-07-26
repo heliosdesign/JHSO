@@ -77,7 +77,7 @@ require('./images/26-1.svg')
 require('./images/jhso-logo-en.svg')
 
 window.onload = function() {
-  // _ VARIABLES *********************************************************
+  // _ VARIABLES **************************************************************
   let index = 1 // Indicates what slide you are on. Super important!
 
   // _ DOM REFERENCES *********************************************************
