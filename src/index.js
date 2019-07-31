@@ -308,6 +308,9 @@ window.onload = function() {
     const video = document.querySelector(`.slide-${index} .slide-panel .video-media`)
     if (video !== null && !video.paused) video.pause()
 
+    const btnVideo = document.querySelector(`.slide-${index} .slide-panel .btn-video.mod-play`)
+    if (btnVideo !== null) btnVideo.innerHTML = `<i class="icon-play"></i>`
+
     if (audio.name != track) {
       audio.src = track
       audio.name = track
