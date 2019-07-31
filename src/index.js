@@ -238,6 +238,8 @@ window.onload = function() {
 
   // Toggle video elemnt to play / pause.
   function playVideo() {
+    if (!audio.paused) audio.pause()
+
     // Get the video and play button element from the current slide.
     const video = document.querySelector(`.slide-${index} video`)
     const btnPlay = document.querySelector(`.slide-${index} .btn-video.mod-play`)
@@ -301,7 +303,10 @@ window.onload = function() {
 
   // Toggle the audio to play / pause.
   function playAudio() {
-    const track = `/audio/${this.dataset.audio}.mp3`
+    const track = `./audio/${this.dataset.audio}.mp3`
+
+    const video = document.querySelector(`.slide-${index} .slide-panel .video-media`)
+    if (!video.paused) video.pause()
 
     if (audio.name != track) {
       audio.src = track
