@@ -13,68 +13,7 @@ import './main.sass'
 
 import { TweenMax, Expo } from 'gsap/TweenMax'
 
-require('./video/1.mp4')
-require('./video/2.mp4')
-require('./video/3.mp4')
-require('./video/4.mp4')
-require('./video/5.mp4')
-
-require('./video/1.vtt')
-require('./video/2.vtt')
-require('./video/3.vtt')
-require('./video/4.vtt')
-require('./video/5.vtt')
-
-require('./audio/1.mp3')
-require('./audio/2.mp3')
-require('./audio/3.mp3')
-require('./audio/4.mp3')
-require('./audio/5.mp3')
-require('./audio/6.mp3')
-require('./audio/7.mp3')
-require('./audio/8.mp3')
-require('./audio/9.mp3')
-require('./audio/10.mp3')
-
-require('./images/1-1.svg')
-require('./images/3-1.svg')
-require('./images/3-2.svg')
-require('./images/3-3.svg')
-require('./images/4-1.svg')
-require('./images/4-2.svg')
-require('./images/4-3.svg')
-require('./images/4-4.svg')
-require('./images/4-5.svg')
-require('./images/5-1.svg')
-require('./images/5-2.svg')
-require('./images/5-3-1.svg')
-require('./images/5-3-2.svg')
-require('./images/6-1.svg')
-require('./images/6-2.svg')
-require('./images/6-3-1.svg')
-require('./images/6-3-2.svg')
-require('./images/7-1.svg')
-require('./images/7-2.svg')
-require('./images/7-3.svg')
-require('./images/8-1.svg')
-require('./images/8-2.svg')
-require('./images/9-1.svg')
-require('./images/10-1.svg')
-require('./images/11-1.svg')
-require('./images/12-1.svg')
-require('./images/17-1.svg')
-require('./images/22-1.svg')
-require('./images/22-2.svg')
-require('./images/22-3.svg')
-require('./images/22-4.svg')
-require('./images/23-1.svg')
-require('./images/24-1.svg')
-require('./images/24-2.svg')
-require('./images/24-3.svg')
-require('./images/24-4.svg')
-require('./images/25-1.svg')
-require('./images/26-1.svg')
-require('./images/jhso-logo-en.svg')
+import './js/media-declarations'
 
 window.onload = function() {
   // _ VARIABLES **************************************************************
@@ -98,7 +37,7 @@ window.onload = function() {
   const btnYes = document.querySelectorAll('.btn-quiz.mod-yes') // Agree quiz buttons.
   const btnNo = document.querySelectorAll('.btn-quiz.mod-no') // Disagree quiz buttons.
 
-  const audio = document.querySelector('.voiceover') // Audio element
+  const audio = document.querySelector('.voiceover-audio') // Audio element
   const btnVoiceover = document.querySelectorAll('.btn-voiceover') // Play voiceover audio buttons.
 
   // _ FUNCTIONS **************************************************************
@@ -196,7 +135,6 @@ window.onload = function() {
         })
 
         index <= slides.length + 1 ? index++ : ''
-        audio.src = `./audio/${index}.mp3`
         updateNav()
       }
     })
@@ -242,9 +180,6 @@ window.onload = function() {
       display: 'flex'
     })
 
-    // Set the audio for the selected slide.
-    audio.src = `./audio/${index}.mp3`
-
     // Reset the questions, update the nav, close the nav.
     resetQuestions()
     updateNav()
@@ -272,17 +207,20 @@ window.onload = function() {
     const questionPanel = document.querySelector(`.slide-${index} .mod-question`)
     const answerPanel = document.querySelector(`.slide-${index} .mod-answer`)
     const answerHeading = document.querySelector(`.slide-${index} .mod-answer .type-heading`)
+    const answerVoiceoverBtn = document.querySelector(`.slide-${index} .mod-answer .btn-voiceover`)
 
     // If the button you clicked on has data-attribute of true...
     // ...set the heading to read "Correct.", add styling to answer panel.
     if (this.dataset.correct === 'true') {
       answerHeading.textContent = 'Correct.'
       answerPanel.classList.add('mod-correct')
+      answerVoiceoverBtn.dataset.data = `${index}-A`
       // If the button you clicked on has data-attribute of false...
       // ...set the heading to read "Incorrect.", add styling to answer panel.
     } else {
       answerHeading.textContent = 'Incorrect.'
       answerPanel.classList.add('mod-incorrect')
+      answerVoiceoverBtn.dataset.audio = `${index}-B`
     }
 
     // Set opacity of question panel to 0.
@@ -363,6 +301,13 @@ window.onload = function() {
 
   // Toggle the audio to play / pause.
   function playAudio() {
+    const track = `/audio/${this.dataset.audio}.mp3`
+
+    if (audio.name != track) {
+      audio.src = track
+      audio.name = track
+    }
+
     audio.paused ? audio.play() : audio.pause()
   }
 
