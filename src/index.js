@@ -306,7 +306,7 @@ window.onload = function() {
     const track = `./audio/${this.dataset.audio}.mp3`
 
     const video = document.querySelector(`.slide-${index} .slide-panel .video-media`)
-    if (!video.paused) video.pause()
+    if (video !== null && !video.paused) video.pause()
 
     if (audio.name != track) {
       audio.src = track
