@@ -1,0 +1,98 @@
+@import './mediaqueries.sass'
+
+
+.image
+  margin-bottom: 4rem
+  width: calc(37.5rem * 0.75)
+  z-index: 1
+
+  &.mod-width-1
+    width: calc(37.5rem * 0.67)
+
+  &.mod-width-2
+    width: calc(37.5rem * 0.5)
+
+  &.mod-width-3
+    width: calc(37.5rem * 0.4)
+    margin-bottom: 3rem
+
+  &.mod-position-1
+    margin-top: -4rem
+
+  &.mod-position-2
+    margin-top: -5rem
+
+  &.mod-width-full
+    width: calc(100% + 6rem)
+
+    @media screen and (min-width: $break-medium-1)
+      width: 100%
+
+
+.image-background
+  position: absolute
+  z-index: 0
+
+  &.mod-blob
+    width: 200%
+
+  &.mod-blob-2
+    width: 180%
+
+  &.mod-blob-position-1
+    margin-top: 2rem
+
+  &.mod-number-left
+    height: 100%
+    left: 0
+
+  &.mod-number-right
+    height: 100%
+    right: 0
+
+  &.mod-drip
+    top: 0
+    width: 100%
+
+  &.mod-drip-2
+    top: 0
+    width: 100%
+
+  &.mod-drip-3
+    bottom: 75%
+    width: 100%
+
+  @media screen and (min-width: $break-medium-1)
+    &.mod-blob-position-1
+      margin-top: 4rem
+
+    &.mod-drip-2
+      top: -10%
+
+    &.mod-drip-3
+      bottom: 65%
+
+  @media screen and (min-width: $break-large-1)
+    &.mod-drip
+      top: -50%
+
+    &.mod-drip-2
+      top: -65%
+
+    &.mod-drip-3
+      bottom: 65%
+
+    &.mod-blob
+      width: 133%
+
+    &.mod-blob-2
+      width: 100%
+
+    &.mod-blob-position-2
+      margin-left: 5rem
+
+
+.image-header
+  bottom: -2%
+  position: absolute
+  width: 100%

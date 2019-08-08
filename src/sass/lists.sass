@@ -1,0 +1,69 @@
+@import './color.sass'
+@import './mediaqueries.sass'
+@import './typography.sass'
+
+
+.list
+  counter-reset: counter
+  list-style: none
+  margin: 2rem 0
+  padding-left: 5.2rem
+  width: 315px
+
+  &.mod-alt
+    margin: 4rem 0
+    padding-left: 6.2rem
+
+  &.mod-alt li::before
+    top: -1rem
+
+  @media screen and (min-width: $break-medium-1)
+    width: 400px
+
+  @media screen and (min-width: $break-large-1)
+    width: 550px
+
+    &.mod-alt
+      padding-left: 20%
+
+
+.list li
+  counter-increment: counter
+  position: relative
+
+
+.list li::before
+  background: $black
+  border-radius: 50%
+  color: $white
+  content: counter(counter)
+  font-family: $font-headings
+  font-size: 2.6rem
+  font-weight: 700
+  height: 4.2rem
+  left: -5.2rem
+  line-height: 4.2rem
+  position: absolute
+  text-align: center
+  top: -0.25rem
+  width: 4.2rem
+
+  @media screen and (min-width: $break-medium-1)
+    left: -5.7rem
+
+
+.list-type
+  font-family: $font-headings
+  font-size: 1.7rem
+  font-style: italic
+  font-weight: 700
+  margin-bottom: 2rem
+  text-align: left
+
+  &.mod-alt
+    margin-bottom: 4rem
+
+
+.list a
+  color: $blue
+  text-decoration: underline

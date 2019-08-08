@@ -1,0 +1,80 @@
+@import './color.sass'
+@import './mediaqueries.sass'
+
+
+$font-headings: 'Archivo Narrow', sans-serif
+$font-body: 'Lato', sans-serif
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+  font-family: $font-body
+  font-size: 1.7rem
+  font-weight: 400
+  z-index: 2
+
+
+.type-heading
+  font-family: $font-headings
+  font-weight: 700
+  margin-bottom: 2rem
+  z-index: 1
+
+  &.mod-heading-1
+    font-size: 4.8rem
+
+  &.mod-heading-2
+    font-size: 3.6rem
+
+  &.mod-heading-3
+    font-size: 3rem
+
+  &.mod-heading-3.mod-resources
+    margin-bottom: 0
+
+  &.mod-heading-4
+    font-size: 2.2rem
+    font-style: italic
+
+  & > span.mod-highlight
+    color: $yellow
+
+
+.type-body
+  font-family: $font-body
+  font-size: 1.7rem
+  font-weight: 400
+  margin-bottom: 2rem
+  z-index: 1
+
+  &.mod-bold
+    font-weight: 700
+
+  & > span.mod-bold
+    font-weight: 700
+
+  & a
+    font-weight: 700
+    color: $blue
+    text-decoration: underline
+
+
+.type-info
+  bottom: 3rem
+  font-family: $font-body
+  font-size: 1.2rem
+  font-weight: 400
+  line-height: 1rem
+  margin-bottom: 0
+  position: absolute
+  z-index: 1
+
+  & .icon-scroll
+    display: block
+    font-size: 3rem
+    margin-bottom: -0.5rem

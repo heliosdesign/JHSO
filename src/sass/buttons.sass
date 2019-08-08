@@ -1,0 +1,159 @@
+@import './css/icons-codes.css';
+@import './css/icons-embedded.css';
+@import './css/icons-ie7-codes.css';
+@import './css/icons-ie7.css';
+@import './css/icons.css';
+
+@import './color.sass'
+@import './typography.sass'
+@import './mediaqueries.sass'
+
+
+button:focus
+  border-color: #9ecaed
+  box-shadow: 0 0 10px #9ecaed
+  outline: none
+
+
+.btn
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2)
+  font-family: $font-headings
+  font-size: 2rem
+  font-weight: 700
+  z-index: 3
+
+
+.btn-next
+  background: $black
+  border-radius: 2rem
+  bottom: 4rem
+  color: $white
+  padding: 1rem 2rem
+  position: absolute
+
+  @media screen and (min-width: $break-large-1)
+    bottom: 3rem
+
+
+.btn-prev
+  background: $blue
+  border-radius: 50%
+  color: $white
+  height: 4rem
+  left: 2rem
+  position: absolute
+  top: 3rem
+  width: 4rem
+
+  &.mod-quiz
+    background: $white
+    color: $blue
+
+  & .icon-prev
+    font-size: 2rem
+    left: -2px
+    position: relative
+    top: 1px
+
+
+.btn-voiceover
+  background: $blue
+  border-radius: 50%
+  color: $white
+  height: 4rem
+  position: absolute
+  right: 2rem
+  top: 3rem
+  width: 4rem
+
+  &.mod-light
+    background: $white
+    color: $blue
+
+  &.mod-light-2
+    background: $white
+    color: $grey
+
+  & .icon-voiceover
+    font-size: 2rem
+    position: relative
+
+
+.btn-menu
+  box-shadow: none
+  color: $black
+  height: 4rem
+  left: 2rem
+  position: absolute
+  top: 3rem
+  width: 4rem
+
+  &.mod-light
+    color: $white
+
+  & .icon-menu
+    font-size: 2rem
+    left: 1px
+    position: relative
+
+
+.btn-nav
+  box-shadow: none
+  color: $white
+  padding: 1rem
+
+  &.is-active
+    color: $yellow
+
+.btn-close
+  box-shadow: none
+  color: $white
+  height: 4rem
+  position: absolute
+  right: 2rem
+  top: 3rem
+  width: 4rem
+
+
+.btn-quiz
+  border-radius: 2rem
+  padding: 1rem 2rem
+  position: absolute
+  width: 315px
+
+  &.mod-yes
+    background: $white
+    bottom: 8.2rem
+    color: $grey
+    margin-bottom: 1rem
+
+  &.mod-no
+    background: $grey
+    bottom: 4rem
+    color: $white
+
+  @media screen and (min-width: $break-large-1)
+    &.mod-yes
+      bottom: 7.2rem
+
+    &.mod-no
+      bottom: 3rem
+
+
+.btn-video
+  background: $blue
+  border-radius: 50%
+  color: $white
+  display: inline-block
+  height: 5rem
+  width: 5rem
+
+  &.mod-play
+    height: 6rem
+    margin: 0 1rem
+    width: 6rem
+
+    & .icon-play
+      font-size: 2.5rem
+      left: 0.3rem
+      position: relative

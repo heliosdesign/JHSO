@@ -1,17 +1,15 @@
 {
-  "name": "webpack-babel-scss-starter",
+  "name": "JHSO",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --host 0.0.0.0 --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "",
   "devDependencies": {
     "@babel/core": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
@@ -22,11 +20,16 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.7.0",
     "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.3.0",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gsap": "^2.1.3"
+  }
 }
