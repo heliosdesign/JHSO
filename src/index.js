@@ -120,6 +120,10 @@ window.onload = function() {
     // Pause the audio if playing.
     audio.paused ? '' : audio.pause()
 
+    // Pause the video if playing.
+    const video = document.querySelector(`.slide-${index} video`)
+    if (video !== null) video.pause()
+
     // Set the next slide to display: flex
     TweenMax.set(`.slide-${index + 1} .slide-panel`, { display: 'flex' })
 
@@ -146,6 +150,10 @@ window.onload = function() {
   function switchPage() {
     // Pause the audio if playing.
     audio.paused ? '' : audio.pause()
+
+    // Pause the video if playing.
+    const video = document.querySelector(`.slide-${index} video`)
+    if (video !== null) video.pause()
 
     // Set the index to be the data-attribute of the button that was selected.
     index = parseInt(this.dataset.page)
