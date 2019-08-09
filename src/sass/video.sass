@@ -5,6 +5,7 @@
 .video
   margin-bottom: 2rem
   width: calc(100% + 6rem)
+  position: relative
 
   @media screen and (min-width: $break-medium-1)
     width: 768px
@@ -41,3 +42,15 @@
 
 .video-title
   margin-bottom: 0
+
+
+.video-screenshot
+  width: 100%
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 1
+  transition: opacity 0.3s ease
+
+  &.mod-hidden
+    opacity: 0

@@ -113,3 +113,10 @@ require('../video/2.vtt')
 require('../video/3.vtt')
 require('../video/4.vtt')
 require('../video/5.vtt')
+
+// _ Video Screenshots ********************************************************
+require('../images/video-1.jpg')
+require('../images/video-2.jpg')
+require('../images/video-3.jpg')
+require('../images/video-4.jpg')
+require('../images/video-5.jpg')
