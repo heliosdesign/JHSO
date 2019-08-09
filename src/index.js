@@ -246,7 +246,11 @@ window.onload = function() {
 
   // Toggle video elemnt to play / pause.
   function playVideo() {
+    // Pause the voiceover audio, if playing.
     if (!audio.paused) audio.pause()
+
+    const screenshot = document.querySelector(`.slide-${index} .video-screenshot`)
+    screenshot.classList.add('mod-hidden')
 
     // Get the video and play button element from the current slide.
     const video = document.querySelector(`.slide-${index} video`)
